@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meta Ads Plan of Action | Focus Elixir</title>
+<style>
+/* Theme: Ocean Depths (theme-factory) — Deep Navy #1a2332, Teal #2d8b8b, Seafoam #a8dadc, Cream #f1faee */
+:root{
+  --navy:#1a2332; --navy2:#243247; --teal:#2d8b8b; --teal-d:#1f6a6a; --seafoam:#a8dadc; --cream:#f1faee;
+  --white:#ffffff; --ink:#1a2332; --muted:#46586b; --line:#cfe3df; --warn:#b4532a; --ok:#1f6a6a;
+  --font:"DejaVu Sans", Verdana, "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px}
+a{color:var(--teal-d)}
+a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--cream);padding:72px 0 56px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--seafoam)}
+.hero h1{font-size:46px;line-height:1.1;margin:14px 0 18px;font-weight:700;letter-spacing:-.01em}
+.hero h1 span{color:var(--seafoam)}
+.hero p.sub{font-size:19px;max-width:760px;color:#d6e8e6;margin:0 0 32px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:#b9d3d1;border-top:1px solid #34475f;padding-top:20px}
+.meta b{color:var(--cream)}
+
+/* Nav */
+.nav{background:var(--navy2);border-top:1px solid #34475f}
+.nav .wrap{display:flex;flex-wrap:wrap;gap:4px 6px;padding-top:10px;padding-bottom:10px}
+.nav a{color:var(--cream);text-decoration:none;font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid #3d5470}
+.nav a:hover{background:var(--teal);border-color:var(--teal)}
+
+/* Sections */
+section.block{padding:64px 0;border-bottom:1px solid var(--line)}
+section.block.alt{background:var(--white)}
+section.block.dark{background:var(--navy);color:var(--cream);border-bottom:0}
+.num{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-d)}
+.dark .num{color:var(--seafoam)}
+h2{font-size:32px;line-height:1.2;margin:8px 0 14px;letter-spacing:-.01em}
+h3{font-size:19px;margin:28px 0 10px}
+.lead{font-size:18px;color:var(--muted);max-width:780px;margin:0 0 28px}
+.dark .lead{color:#c8dcda}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+
+/* Cards */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0}
+.alt .card{background:var(--cream)}
+.dark .card{background:var(--navy2);border-color:#34475f}
+.kpi .v{font-size:32px;font-weight:700;color:var(--teal-d);line-height:1.1}
+.dark .kpi .v{color:var(--seafoam)}
+.kpi .l{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:8px}
+.kpi .d{font-size:14px;color:var(--muted);margin-top:4px}
+.dark .kpi .d{color:#c8dcda}
+.card h4{margin:0 0 8px;font-size:17px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--seafoam);color:var(--navy);margin-bottom:10px}
+
+/* Callout */
+.callout{border-left:5px solid var(--teal);background:#e3f3f0;border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.callout.warn{border-left-color:var(--warn);background:#fbece4}
+.callout b.t{display:block;margin-bottom:4px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-d)}
+.callout.warn b.t{color:var(--warn)}
+
+/* Tables */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--white);margin:18px 0}
+table.t{border-collapse:collapse;width:100%;font-size:14.5px;min-width:640px}
+.t th{background:var(--navy);color:var(--cream);text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
+.t td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top}
+.t tr:nth-child(even) td{background:#f6fbf9}
+.t td.n,.t th.n{text-align:right;white-space:nowrap}
+.t .hl td{background:#dff1ee!important;font-weight:700}
+.neg{color:var(--warn);font-weight:700}
+.pos{color:var(--ok);font-weight:700}
+
+/* Bars */
+.bars{display:flex;flex-direction:column;gap:10px;margin:18px 0}
+.bar{display:grid;grid-template-columns:130px 1fr 190px;gap:12px;align-items:center;font-size:14px}
+.bar .track{background:#d9ece8;border-radius:8px;height:30px;overflow:hidden}
+.bar .fill{height:100%;background:var(--teal);border-radius:8px;display:flex;align-items:center;padding-left:10px;color:#fff;font-weight:700;font-size:13px}
+.bar .amt{color:var(--muted)}
+
+/* Steps */
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:12px;margin:18px 0}
+.step{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.step:before{counter-increment:s;content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step b{display:block}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.yes,.no{border-radius:14px;padding:20px;border:1px solid var(--line);background:var(--white)}
+.yes h4{color:var(--ok);margin:0 0 8px}
+.no h4{color:var(--warn);margin:0 0 8px}
+.yes{border-top:5px solid var(--teal)}
+.no{border-top:5px solid var(--warn)}
+.code{font-family:"DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:13px;background:var(--navy);color:var(--seafoam);padding:14px 16px;border-radius:10px;overflow-x:auto;white-space:pre;margin:12px 0}
+.small{font-size:13.5px;color:var(--muted)}
+.dark .small{color:#b9d3d1}
+
+footer{background:var(--navy);color:#b9d3d1;padding:36px 0;font-size:14px}
+
+@media (max-width:860px){
+  .hero h1{font-size:34px}
+  .g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .split{grid-template-columns:1fr}
+  .bar{grid-template-columns:1fr}
+  h2{font-size:27px}
+}
+@media (max-width:560px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+}
+@media print{
+  body{background:#fff;font-size:12px}
+  .nav{display:none}
+  section.block{padding:28px 0;break-inside:auto}
+  .card,.callout,.tw,.step{break-inside:avoid}
+  .hero,.dark,.t th,.code,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Plan of action · Meta Ads · India D2C</div>
+    <h1>Focus Elixir: <span>profitable Meta growth</span> at ₹2.3L a month, judged on MER</h1>
+    <p class="sub">A 90-day operating plan for taking Focus Elixir from setup to a repeatable, scalable acquisition engine. Built on your unit economics, not on platform ROAS.</p>
+    <div class="meta">
+      <span><b>Prepared for:</b> Focus Elixir founders</span>
+      <span><b>Scope:</b> Meta media buying, ~6 hrs/week</span>
+      <span><b>Site reviewed:</b> drinkelixir.in</span>
+      <span><b>Dates:</b> relative to launch day (L)</span>
+    </div>
+  </div>
+  <nav class="nav" aria-label="Sections" style="margin-top:40px">
+    <div class="wrap">
+      <a href="#summary">Summary</a><a href="#start">Starting position</a><a href="#economics">Economics</a><a href="#architecture">Architecture</a><a href="#creative">Creative</a><a href="#week0">Week 0</a><a href="#ramp">Ramp</a><a href="#rules">Rules</a><a href="#rhythm">Rhythm</a><a href="#reporting">Reporting</a><a href="#cro">CRO</a><a href="#risks">Risks</a><a href="#roadmap">30/60/90</a><a href="#roles">Roles</a>
+    </div>
+  </nav>
+</header>
+
+<!-- 1 SUMMARY -->
+<section class="block" id="summary">
+  <div class="wrap">
+    <div class="num">01 · Executive summary</div>
+    <h2>The plan in one page</h2>
+    <p class="lead">Fifteen-plus years of buying paid media has taught me one thing above all: accounts do not fail because of the algorithm. They fail because of weak tracking, inconsistent offers, thin creative supply, and decisions made on feelings instead of rules. This plan removes all four.</p>
+
+    <div class="grid g4 kpi">
+      <div class="card"><div class="v">₹2.3L</div><div class="l">Monthly media</div><div class="d">D2C website only, no marketplaces</div></div>
+      <div class="card"><div class="v">₹408</div><div class="l">Contribution / order</div><div class="d">On ~₹900 AOV. This is the break-even CAC on a first order</div></div>
+      <div class="card"><div class="v">≤ ₹550</div><div class="l">Month 1 blended CAC</div><div class="d">Trending to ₹450 by Month 2</div></div>
+      <div class="card"><div class="v">MER</div><div class="l">North star</div><div class="d">Total revenue ÷ total marketing spend. Not Meta ROAS</div></div>
+    </div>
+
+    <h3>How I will run it</h3>
+    <div class="grid g3">
+      <div class="card"><span class="tag">Principle 1</span><h4>MER first, ROAS second</h4><p class="small">Meta will over- and under-attribute. Shopify revenue against total spend is the number we both trust. Platform ROAS is a diagnostic, never the verdict.</p></div>
+      <div class="card"><span class="tag">Principle 2</span><h4>Rules decide, not moods</h4><p class="small">Kill, hold and scale thresholds are agreed before launch and executed mechanically. No emotional pauses, no “let it run one more day”.</p></div>
+      <div class="card"><span class="tag">Principle 3</span><h4>Creative is the targeting</h4><p class="small">With Advantage+ the audience is broad. The hook, angle and proof you show decide who converts. 2–3 new ads every week keeps the engine fed.</p></div>
+      <div class="card"><span class="tag">Principle 4</span><h4>Fix the leak before the tap</h4><p class="small">A 10% lift in conversion rate cuts CAC by about 9% at the same CPC. Landing page and offer fixes are worth more than any bid tweak.</p></div>
+      <div class="card"><span class="tag">Principle 5</span><h4>One change at a time</h4><p class="small">Every change is logged with a reason and a review date, so we always know what moved the numbers.</p></div>
+      <div class="card"><span class="tag">Principle 6</span><h4>Scale only on proof</h4><p class="small">Budget rises in capped steps, and only while blended CAC and MER hold. If they slip, we roll back the last step, not the whole account.</p></div>
+    </div>
+
+    <div class="callout warn">
+      <b class="t">Straight talk on the Month 1 target</b>
+      420 orders at ≤ ₹550 CAC needs the full ₹2.3L spent at about ₹548 CAC from day one. With a managed ramp from ₹5,000 to ₹7,600 a day, Month 1 spend is closer to ₹1.9–2.1L, so the realistic range is <b>340–380 orders</b>. I will define Month 1 success as: <b>(a)</b> a run-rate of 14+ orders a day by Day 21, <b>(b)</b> 30-day blended CAC ≤ ₹600 including the learning phase, <b>(c)</b> ≥ 380 orders. 420 is the upside case, and Month 2 is where it becomes the baseline. Details in <a href="#economics">section 03</a>.
+    </div>
+  </div>
+</section>
+
+<!-- 2 STARTING POSITION -->
+<section class="block alt" id="start">
+  <div class="wrap">
+    <div class="num">02 · Starting position</div>
+    <h2>What I found on drinkelixir.in</h2>
+    <p class="lead">A strong, differentiated product: a 75ml nootropic focus shot, 4.8 stars on 200+ verified reviews, a double-blind placebo-controlled trial, COD, free delivery and a money-back guarantee. The offer and claims are not yet consistent across the site, and that costs conversions and puts ads at risk.</p>
+
+    <h3>Pre-launch blockers (fix before ads go live)</h3>
+    <div class="tw"><table class="t">
+      <thead><tr><th>#</th><th>Finding</th><th>Why it costs money</th><th>Fix</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Offer inconsistency: hero says 10% off for first-timers, pop-up says 15% off for signup</td><td>Buyers who see two offers hesitate or hunt for codes. Ad copy cannot promise one number</td><td>One first-order offer, stated identically on ads, pop-up, PDP and cart</td><td>Founder</td></tr>
+        <tr><td>2</td><td>Guarantee wording varies: “30 days” in places, “14 days” in the refund text</td><td>Weakens the biggest risk-reversal on the page and creates refund disputes</td><td>Pick one window and align every page, policy and ad</td><td>Founder</td></tr>
+        <tr><td>3</td><td>Trial numbers differ between assets. An infographic shows anxiety −20% and sleepiness −12%, while homepage text says anxiety about −16%, sleepiness about −20%, fatigue about −12%</td><td>Meta policy and consumer-law risk, and a credibility problem if a sceptical buyer compares them</td><td>Confirm figures against the study report. Use only the verified set, stated exactly as published</td><td>Founder</td></tr>
+        <tr><td>4</td><td>Duration claim varies: “4+ hours”, “5 hours”, “3–4 hours”</td><td>Inconsistent claims trigger ad review flags and weaken trust</td><td>One duration claim, matching the study, everywhere</td><td>Founder</td></tr>
+        <tr><td>5</td><td>“FSSAI Approved” badge</td><td>FSSAI licenses and registers businesses; “approved” can be challenged</td><td>Compliance to confirm exact wording (for example “manufactured in an FSSAI-licensed facility”, with licence number)</td><td>Founder</td></tr>
+        <tr><td>6</td><td>Tobacco comparisons and anxiety or dependency language in copy</td><td>High Meta disapproval and account-restriction risk in health and wellness</td><td>Remove from anything we advertise or link to</td><td>Founder + me</td></tr>
+        <tr><td>7</td><td>No clear per-shot price or pack mapping</td><td>Pack of 12 (₹680, ₹56.67/shot) and Pack of 24 (₹1,080, ₹45/shot) look expensive without the per-shot frame</td><td>Show per-shot price, save %, and default the selector to the 12-pack</td><td>Dev (we implement)</td></tr>
+        <tr><td>8</td><td>Shiprocket (Fastrr) one-click checkout is loaded on the store</td><td>Third-party checkouts are a common cause of missing Purchase events and broken attribution</td><td>QA a real prepaid and a real COD order end to end in Week 0</td><td>Me + dev</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 3 ECONOMICS -->
+<section class="block" id="economics">
+  <div class="wrap">
+    <div class="num">03 · Unit economics and targets</div>
+    <h2>The math that governs every decision</h2>
+    <p class="lead">At ~₹900 AOV and ~₹408 contribution per order, a customer is profitable on the first order only if blended CAC is ₹408 or less. Your ₹550 target is a deliberate bet on repeat purchase. I want to see that bet in numbers before we scale.</p>
+
+    <div class="tw"><table class="t">
+      <thead><tr><th>Blended CAC</th><th class="n">Profit on first order</th><th class="n">MER (₹900 AOV)</th><th class="n">Orders at ₹2.3L</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td>₹650</td><td class="n neg">−₹242</td><td class="n">1.38</td><td class="n">354</td><td>Alarm zone. Root-cause call</td></tr>
+        <tr class="hl"><td>₹550 (Month 1 target)</td><td class="n neg">−₹142</td><td class="n">1.64</td><td class="n">418</td><td>Needs ~35% of new buyers to reorder to pay back</td></tr>
+        <tr class="hl"><td>₹450 (Month 2 target)</td><td class="n neg">−₹42</td><td class="n">2.00</td><td class="n">511</td><td>Needs ~10% to reorder. Near break-even</td></tr>
+        <tr><td>₹408 (break-even)</td><td class="n">₹0</td><td class="n">2.21</td><td class="n">564</td><td>First order pays for itself</td></tr>
+        <tr><td>₹350</td><td class="n pos">+₹58</td><td class="n">2.57</td><td class="n">657</td><td>Room to scale spend aggressively</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small">Repeat requirement = (CAC − ₹408) ÷ ₹408 contribution on a second order. MER here equals ₹900 ÷ CAC. It rises with repeat and returning-customer revenue, since MER counts all revenue.</p>
+
+    <div class="callout">
+      <b class="t">Assumptions I need you to confirm in Week 0</b>
+      (1) Is the ₹408 contribution after COGS, shipping, payment and COD fees, and expected RTO losses? (2) What share of orders is COD, and what is the RTO rate? (3) What repeat rate do you see at 30/60/90 days? These three numbers decide how hard we can push past ₹408 CAC.
+    </div>
+
+    <h3>What the funnel has to look like (illustrative, replaced with actuals in Week 2)</h3>
+    <p class="small">CAC = CPC ÷ site conversion rate. These are planning figures, not promises.</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Metric</th><th class="n">To hit ₹550</th><th class="n">To hit ₹450</th><th>Main lever</th></tr></thead>
+      <tbody>
+        <tr><td>CPM</td><td class="n">₹180</td><td class="n">₹180</td><td>Creative quality, placement mix, seasonality</td></tr>
+        <tr><td>Link CTR</td><td class="n">1.2%</td><td class="n">1.4%</td><td>Hooks and angles</td></tr>
+        <tr><td>Link CPC</td><td class="n">₹15.00</td><td class="n">₹12.86</td><td>Derived: CPM ÷ (CTR × 1000)</td></tr>
+        <tr><td>Site conversion rate</td><td class="n">2.7%</td><td class="n">2.9%</td><td>Landing page, offer, pack default, checkout</td></tr>
+        <tr class="hl"><td>Blended CAC</td><td class="n">≈ ₹556</td><td class="n">≈ ₹443</td><td></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Where AOV comes from</h3>
+    <p>Pack prices are ₹399 (6), ₹680 (12) and ₹1,080 (24). A ₹900 AOV means your mix already leans to bigger packs. Every ₹100 of AOV lifts break-even CAC by roughly ₹45 at your margin structure. That makes the pack default, bundles and per-shot framing as important as any ad.</p>
+  </div>
+</section>
+
+<!-- 4 ARCHITECTURE -->
+<section class="block alt" id="architecture">
+  <div class="wrap">
+    <div class="num">04 · Account architecture and strategy</div>
+    <h2>Two campaigns, one clear job each</h2>
+    <p class="lead">Simple structures learn faster and are easier to diagnose. Your ₹2.3L budget does not justify more than two campaigns.</p>
+
+    <div class="tw"><table class="t">
+      <thead><tr><th>Campaign</th><th>Objective and optimisation</th><th>Audience</th><th class="n">Budget share</th></tr></thead>
+      <tbody>
+        <tr><td><b>ASC | IN | Purchase value</b><br><span class="small">Advantage+ sales campaign (Shopping)</span></td><td>Sales, website purchases, <b>value optimisation</b></td><td>Broad India, 18+, no interest stacking. Existing-customer budget cap set low, purchaser list excluded. Creative does the targeting</td><td class="n">80–85%</td></tr>
+        <tr><td><b>RT | IN | Purchase</b><br><span class="small">Retargeting</span></td><td>Sales, website purchases</td><td>Add to cart or checkout, no purchase (7/14 days). Product-page viewers, no cart (30 days). Video viewers 75% and IG engagers (90 days). Exclude purchasers (180 days)</td><td class="n">15–20%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small">At ₹7,600 a day that is about ₹6,460 for cold and ₹1,140 for retargeting. At launch the retargeting pool is small, so I start it near 10% (₹500 a day) and grow it as audiences fill.</p>
+
+    <h3>Account foundations (Week 0)</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Business and ad account</h4><ul><li>Business Manager owned by Focus Elixir, with me as a partner or admin. Never the other way round</li><li>One ad account, one dataset (Pixel), one payment method, two-factor on for all admins</li><li>Domain verified, IG and Facebook page connected</li></ul></div>
+      <div class="card"><h4>Tracking</h4><ul><li>Pixel plus Conversions API (Shopify native or server-side) with matching event IDs for deduplication</li><li>Events: ViewContent, AddToCart, InitiateCheckout, Purchase with correct value and currency (INR)</li><li>Event match quality target: 8+ on Purchase</li><li>Shiprocket checkout verified separately for both prepaid and COD</li></ul></div>
+    </div>
+
+    <h3>Naming and tracking conventions</h3>
+    <div class="code">Campaign : ASC_IN_PURCHASE-VALUE_BROAD
+Ad       : [ANGLE]_[HOOK#]_[FORMAT]_[CREATOR]_[WEEK]   e.g. COFFEE-ALT_H2_UGC9x16_AMAN_W03
+
+UTM template on every ad URL
+?utm_source=meta&amp;utm_medium=paid_social
+&amp;utm_campaign={{campaign.name}}&amp;utm_content={{ad.name}}&amp;utm_term={{adset.name}}</div>
+    <p class="small">One documented convention means Shopify, GA4 and Meta can be reconciled ad by ad.</p>
+  </div>
+</section>
+
+<!-- 5 CREATIVE -->
+<section class="block" id="creative">
+  <div class="wrap">
+    <div class="num">05 · Creative strategy</div>
+    <h2>Seven angles, tested in a fixed order</h2>
+    <p class="lead">You supply 8–12 UGC assets a month. I need 2–3 new ads a week, so supply is just enough with one spare. I will not produce creative, but I will brief what to shoot, and I will tell you precisely which hooks earn the next batch.</p>
+
+    <div class="tw"><table class="t">
+      <thead><tr><th>Angle</th><th>Who it speaks to</th><th>Example hook (spoken or on-screen)</th><th>Proof to show</th></tr></thead>
+      <tbody>
+        <tr><td><b>Coffee and chai alternative</b></td><td>Working professionals, 25–40</td><td>“Third coffee and still can’t focus?”</td><td>Pack shot, “no added sugar”, 75ml size</td></tr>
+        <tr><td><b>Exam and deep-work focus</b></td><td>Students, aspirants</td><td>“How I get through a 4-hour study block”</td><td>Student UGC, study-desk setting</td></tr>
+        <tr><td><b>Clinical proof</b></td><td>Sceptical, research-driven buyers</td><td>“A double-blind trial tested this shot. Here is what changed”</td><td>Trial result as published, study link</td></tr>
+        <tr><td><b>Afternoon slump</b></td><td>Desk workers, developers, consultants</td><td>“3 pm. Same tab open for an hour”</td><td>Relatable skit, real reviewer</td></tr>
+        <tr><td><b>Founder story</b></td><td>Warm audiences, IG followers</td><td>“Why I built Focus Elixir”</td><td>Founder to camera</td></tr>
+        <tr><td><b>Tiny shot, no prep</b></td><td>Convenience buyers</td><td>“75ml. Open. Drink. Work.”</td><td>Unboxing, pocket test</td></tr>
+        <tr><td><b>Risk-free offer</b></td><td>Retargeting</td><td>“Doesn’t work for you? Full refund”</td><td>Guarantee, reviews, 4.8 stars</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>How testing works inside Advantage+</h3>
+    <ul>
+      <li><b>Order:</b> angle first, then hook, then format, then creator. Never test four variables at once.</li>
+      <li><b>Batch:</b> 2–3 ads a week, each from a different angle until two angles prove out. Then 1 winner iteration plus 1–2 fresh angles.</li>
+      <li><b>Cap:</b> 8–10 live ads in the cold campaign. More than that dilutes spend and slows learning.</li>
+      <li><b>Diagnostics:</b> hook rate (3-second views ÷ impressions) target ≥ 30%. Link CTR ≥ 1.0%. Then CPA decides.</li>
+    </ul>
+
+    <h3>Claims guardrails (protects the account)</h3>
+    <div class="split">
+      <div class="yes"><h4>Use</h4><ul><li>“Clinically tested” with a link to the study</li><li>Trial results stated exactly as published, vs placebo</li><li>Everyday situations (study block, 3 pm slump, long meeting)</li><li>Real reviews with names and context</li><li>One duration claim, matching the study</li></ul></div>
+      <div class="no"><h4>Avoid</h4><ul><li>Tobacco or cigarette comparisons</li><li>“No side effects”, “non-addictive”, “cures” or “treats”</li><li>Health-condition or personal-attribute callouts (“Are you anxious?”)</li><li>Before-and-after body or mental-state implications</li><li>Conflicting numbers across ads, page and infographics</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 WEEK 0 -->
+<section class="block alt" id="week0">
+  <div class="wrap">
+    <div class="num">06 · Week 0 setup plan</div>
+    <h2>Eight days from kickoff to launch</h2>
+    <p class="lead">Dates are relative to launch day (L), so the plan holds whatever the calendar says.</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Day</th><th>What gets done</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td><b>L−7</b></td><td>Kickoff call. Collect all access, confirm Business Manager ownership, confirm unit-economics assumptions (margin, COD share, RTO, repeat rate)</td><td>Founder + me</td></tr>
+        <tr><td><b>L−6</b></td><td>Domain verification, Pixel and Conversions API install, event deduplication</td><td>Me + dev</td></tr>
+        <tr><td><b>L−5</b></td><td>QA every event with correct value. GA4 check. UTM convention documented and shared</td><td>Me</td></tr>
+        <tr><td><b>L−4</b></td><td>Build audiences (site visitors 30/90 days, IG engagers, purchaser exclusions). First creative claim review</td><td>Me + founder</td></tr>
+        <tr><td><b>L−3</b></td><td>Build both campaigns in draft. Policy pre-check on every ad</td><td>Me</td></tr>
+        <tr><td><b>L−2</b></td><td>Test orders: one prepaid, one COD, through the Shiprocket checkout. Landing page fix list handed over</td><td>Me + founder</td></tr>
+        <tr><td><b>L−1</b></td><td>Submit ads for review. Reporting sheet live. Automated safety rules set</td><td>Me</td></tr>
+        <tr class="hl"><td><b>L</b></td><td>Launch at ₹5,000 a day. Daily pacing checks begin</td><td>Me</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b class="t">Launch gate</b>
+      I do not launch until Purchase events fire with the right value for both prepaid and COD, ads clear review, and findings 1–6 in <a href="#start">section 02</a> are fixed or consciously accepted in writing. Spending ₹5,000 a day into a broken funnel is the most expensive way to learn.
+    </div>
+  </div>
+</section>
+
+<!-- 7 RAMP -->
+<section class="block" id="ramp">
+  <div class="wrap">
+    <div class="num">07 · Budget ramp and scaling</div>
+    <h2>From ₹5,000 to ₹7,600 a day, earned not assumed</h2>
+    <p class="lead">I recommend a slightly faster ramp than a flat week-by-week climb. At ₹5,000 a day and ₹550 CAC you get about 9 orders a day, roughly 64 a week, enough for the ad account to exit learning without wasting a month.</p>
+
+    <h3>Recommended Month 1 ramp</h3>
+    <div class="bars" role="img" aria-label="Daily budget by phase">
+      <div class="bar"><span>Days 1–3</span><div class="track"><div class="fill" style="width:65.8%">₹5,000</div></div><span class="amt">₹15,000 total</span></div>
+      <div class="bar"><span>Days 4–7</span><div class="track"><div class="fill" style="width:78.9%">₹6,000</div></div><span class="amt">₹24,000 total</span></div>
+      <div class="bar"><span>Days 8–14</span><div class="track"><div class="fill" style="width:92.1%">₹7,000</div></div><span class="amt">₹49,000 total</span></div>
+      <div class="bar"><span>Days 15–30</span><div class="track"><div class="fill" style="width:100%">₹7,600</div></div><span class="amt">₹1,21,600 total</span></div>
+    </div>
+    <p class="small">Total ≈ ₹2,09,600. Each step is conditional: spend only rises if the previous phase held blended CAC at or below ₹650 and nothing is broken. If not, we hold at the current level.</p>
+
+    <h3>What Month 1 can realistically deliver</h3>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Spend path</th><th class="n">Month 1 spend</th><th class="n">Orders at ₹650</th><th class="n">Orders at ₹550</th><th class="n">Orders at ₹450</th></tr></thead>
+      <tbody>
+        <tr><td>Brief ramp (₹5.0k → 5.5k → 6.5k → 7.6k)</td><td class="n">₹1,87,400</td><td class="n">288</td><td class="n">340</td><td class="n">416</td></tr>
+        <tr class="hl"><td>Recommended ramp</td><td class="n">₹2,09,600</td><td class="n">322</td><td class="n">381</td><td class="n">466</td></tr>
+        <tr><td>Full budget from day one</td><td class="n">₹2,30,000</td><td class="n">354</td><td class="n">418</td><td class="n">511</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small">To reach 420 orders: ₹446 CAC on the brief ramp, ₹499 on the recommended ramp, or ₹548 at full budget.</p>
+
+    <h3>Beyond ₹7,600 a day</h3>
+    <ul>
+      <li><b>Scale step:</b> +15–20% every 48–72 hours, only while the 3-day blended CAC is at or below target and frequency is healthy.</li>
+      <li><b>Gate for ₹10,000 a day:</b> 14-day blended CAC ≤ ₹500 and MER ≥ 1.9.</li>
+      <li><b>Rollback:</b> if 3-day CAC exceeds 1.2× target after a step, I reverse that step the next morning.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 RULES -->
+<section class="block alt" id="rules">
+  <div class="wrap">
+    <div class="num">08 · Operating rules</div>
+    <h2>Kill, hold and scale rules, agreed before launch</h2>
+    <p class="lead">Thresholds are set against ₹550 target CAC and tighten to ₹450 in Month 2. They use spend, not just time, so low-volume days do not trigger false kills.</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Situation</th><th>Rule</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>Ad spends ≥ 2× target CAC with no purchase</td><td>Spend ≥ ₹1,100, 0 purchases</td><td><b>Pause</b></td></tr>
+        <tr><td>Weak attention, no early purchase</td><td>Spend ≥ ₹825 (1.5×), 0 purchases, link CTR &lt; 0.8% after 1,000+ impressions</td><td><b>Pause</b></td></tr>
+        <tr><td>Poor efficiency after enough data</td><td>After 3 days and ≥ ₹1,100 spend, CPA &gt; ₹825</td><td><b>Pause</b></td></tr>
+        <tr><td>Ad is working</td><td>CPA ≤ ₹550 with 3+ purchases</td><td><b>Keep</b>, let it spend</td></tr>
+        <tr><td>Ad is a winner</td><td>CPA ≤ ₹450 with 5+ purchases</td><td><b>Brief 3 variations</b> (new hooks, same angle) for next week</td></tr>
+        <tr><td>Retargeting fatigue</td><td>7-day frequency &gt; 4 or CPA &gt; ₹350</td><td><b>Refresh</b> creative and audience windows</td></tr>
+        <tr><td>Blended CAC drifts</td><td>&gt; ₹700 for 5 consecutive days</td><td><b>Stop scaling</b>, root-cause call within 24 hours</td></tr>
+        <tr><td>Runaway or broken delivery</td><td>Daily spend deviates more than 15% from plan, or a disapproval appears</td><td><b>Same-day fix</b> and message to founder</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b class="t">Root-cause checklist when CAC drifts</b>
+      In this order: (1) tracking and event health, (2) site speed, checkout and payment gateway, (3) stock and delivery pincodes, (4) offer or price change, (5) creative fatigue (hook rate, frequency), (6) COD and RTO mix shift, (7) auction and seasonal CPM inflation. Most “algorithm problems” are 1–3.
+    </div>
+  </div>
+</section>
+
+<!-- 9 RHYTHM -->
+<section class="block" id="rhythm">
+  <div class="wrap">
+    <div class="num">09 · Operating rhythm</div>
+    <h2>Six hours a week, spent where they earn the most</h2>
+    <div class="grid g2">
+      <div class="card">
+        <h4>Daily pacing check (about 15 minutes)</h4>
+        <ul>
+          <li>Spend against plan, both campaigns</li>
+          <li>CPA and CAC against the 3-day average</li>
+          <li>Disapprovals, learning-limited flags, delivery issues</li>
+          <li>Meta purchases vs Shopify orders (ratio drift means a tracking fault)</li>
+          <li>Prepaid vs COD mix, stock levels, checkout and payment gateway live</li>
+          <li>Automated rules as a safety net for weekends</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Weekly time budget</h4>
+        <div class="tw" style="margin:6px 0 0"><table class="t" style="min-width:0">
+          <tbody>
+            <tr><td>Daily checks</td><td class="n">1.5 h</td></tr>
+            <tr><td>Creative ops: briefs, launch, retire</td><td class="n">1.5 h</td></tr>
+            <tr><td>Analysis and optimisation</td><td class="n">1.0 h</td></tr>
+            <tr><td>Friday report</td><td class="n">1.0 h</td></tr>
+            <tr><td>60-minute founder call</td><td class="n">1.0 h</td></tr>
+            <tr class="hl"><td>Total</td><td class="n">6.0 h</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <h3>The week</h3>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td><b>Mon</b></td><td>Weekend review, budget step decision, apply rules</td></tr>
+        <tr><td><b>Tue</b></td><td>Launch the week’s 2–3 new ads (claims-checked before upload)</td></tr>
+        <tr><td><b>Wed</b></td><td>Mid-week kill and keep checkpoint, creative feedback to your team</td></tr>
+        <tr><td><b>Thu</b></td><td>Data lock, draft report, retargeting refresh (every 2 weeks)</td></tr>
+        <tr><td><b>Fri</b></td><td>Report delivered in the morning, then the 60-minute call with the founder</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 10 REPORTING -->
+<section class="block alt" id="reporting">
+  <div class="wrap">
+    <div class="num">10 · Measurement and reporting</div>
+    <h2>One source of truth, one Friday report</h2>
+    <p class="lead">Shopify is the source of truth for revenue and orders. MER comes from Shopify revenue divided by total marketing spend. Meta and GA4 are cross-checks and diagnostics, expected to disagree with Shopify by a predictable margin, which I will track.</p>
+
+    <div class="grid g3">
+      <div class="card"><span class="tag">1 · Headline</span><p class="small" style="margin:0">Spend, revenue, <b>MER</b>, blended CAC, orders, versus target and last week.</p></div>
+      <div class="card"><span class="tag">2 · Efficiency</span><p class="small" style="margin:0">CPA by campaign, CTR, CPM, frequency, landing-page conversion rate.</p></div>
+      <div class="card"><span class="tag">3 · Order quality</span><p class="small" style="margin:0">AOV, pack mix, new vs returning, prepaid vs COD, net orders after RTO.</p></div>
+      <div class="card"><span class="tag">4 · Creative leaderboard</span><p class="small" style="margin:0">Per ad: spend, CPA, CTR, hook rate, grouped by angle. What to retire, what to iterate.</p></div>
+      <div class="card"><span class="tag">5 · Actions taken</span><p class="small" style="margin:0">Every change made this week, why, and when we review it.</p></div>
+      <div class="card"><span class="tag">6 · Next week’s test plan</span><p class="small" style="margin:0">The hypotheses, creatives to launch, and the budget decision requested.</p></div>
+    </div>
+
+    <h3>Weekly call agenda (60 minutes)</h3>
+    <ol>
+      <li><b>10 min:</b> the numbers, MER and blended CAC versus plan</li>
+      <li><b>15 min:</b> what the creative leaderboard says, and the next shoot brief</li>
+      <li><b>15 min:</b> landing page, offer, and operations issues (stock, RTO, checkout)</li>
+      <li><b>10 min:</b> budget decision for next week</li>
+      <li><b>10 min:</b> risks, blockers and approvals needed</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 11 CRO -->
+<section class="block" id="cro">
+  <div class="wrap">
+    <div class="num">11 · Landing page CRO</div>
+    <h2>Recommendations, in priority order (we implement)</h2>
+    <p class="lead">Since CAC = CPC ÷ conversion rate, a 10% lift in conversion rate lowers CAC by about 9%, which is ₹550 becoming roughly ₹500 with no change to media. I have built a styled concept page using your site’s own fonts, colours and imagery: <a href="https://claude.ai/artifact/1h74Ezadbh3H7szfaDnvix">open the landing page concept</a>.</p>
+
+    <div class="tw"><table class="t">
+      <thead><tr><th>#</th><th>Recommendation</th><th>Why</th><th>Effort</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><b>Dedicated ad landing page</b> with gallery, buy box, per-shot price, and the 12-pack preselected</td><td>Lifts AOV and conversion together. Direct cart link per pack removes a step</td><td>Medium</td></tr>
+        <tr><td>2</td><td><b>One offer, one guarantee, one duration claim</b> everywhere</td><td>Consistency is a trust signal and an ad-policy shield</td><td>Low</td></tr>
+        <tr><td>3</td><td><b>Reviews and UGC video above the fold</b> (4.8 stars, 200+ verified)</td><td>Social proof is the main objection-handler for a new supplement brand</td><td>Low</td></tr>
+        <tr><td>4</td><td><b>Prepaid incentive versus COD</b> (founder decision)</td><td>Cuts RTO, which directly improves real contribution per order</td><td>Low</td></tr>
+        <tr><td>5</td><td><b>Mobile speed:</b> largest contentful paint under 2.5 s, serve images at about 1,200px in modern formats</td><td>Most Meta traffic is mobile. Slow pages burn paid clicks</td><td>Medium</td></tr>
+        <tr><td>6</td><td><b>Sticky add-to-cart bar</b> on mobile</td><td>Keeps the CTA in reach on a long page</td><td>Low</td></tr>
+        <tr><td>7</td><td><b>Checkout QA</b> through the Shiprocket flow, both payment types</td><td>Protects attribution and recovers lost purchases</td><td>Low</td></tr>
+        <tr><td>8</td><td><b>Post-purchase one-click upsell</b> to a larger pack (founder decision)</td><td>AOV up without additional ad cost</td><td>Medium</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 12 RISKS -->
+<section class="block alt" id="risks">
+  <div class="wrap">
+    <div class="num">12 · Risk register</div>
+    <h2>What could go wrong, and what I do about it</h2>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>Ad disapproval or account restriction from health claims</td><td>High</td><td>High</td><td>Claims guardrails, pre-checked copy, backup ad account and Page set up in Week 0, a single claim set across ads and site</td></tr>
+        <tr><td>CAC settles above break-even and repeat is lower than assumed</td><td>Medium</td><td>High</td><td>Confirm repeat data in Week 0. Scale only on MER gates. Prioritise AOV and pack-mix levers</td></tr>
+        <tr><td>COD RTO inflates “orders” and hides true CAC</td><td>High</td><td>Medium</td><td>Report net orders after RTO weekly. Test a prepaid incentive. Check pincode-level RTO</td></tr>
+        <tr><td>Tracking breakage (Shiprocket checkout, CAPI)</td><td>Medium</td><td>High</td><td>Daily Meta vs Shopify ratio check. Week 0 QA on both payment types</td></tr>
+        <tr><td>Creative supply bottleneck (8–12 assets for 2–3 launches a week)</td><td>Medium</td><td>Medium</td><td>Weekly briefs two weeks ahead. Reuse winning hooks with new openings. Prioritise angles by data</td></tr>
+        <tr><td>Creative fatigue at ₹7,600 a day</td><td>Medium</td><td>Medium</td><td>Hook-rate and frequency tripwires. Always one batch in the pipeline</td></tr>
+        <tr><td>Seasonal CPM inflation (festive and Q4 sale periods)</td><td>High in Q4</td><td>Medium</td><td>Judge on 7-day MER, not single days. Hold scale steps during peaks unless MER holds</td></tr>
+        <tr><td>Stock-out or delivery issues during a scale step</td><td>Low</td><td>High</td><td>Daily stock check. Founder alerts me before low inventory</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 13 ROADMAP -->
+<section class="block dark" id="roadmap">
+  <div class="wrap">
+    <div class="num">13 · 30 / 60 / 90 day roadmap</div>
+    <h2>Stabilise, then sharpen, then scale</h2>
+    <p class="lead">Each phase has an exit test. We do not move on because the calendar says so.</p>
+    <div class="grid g3">
+      <div class="card">
+        <span class="tag">Days 1–30 · Stabilise</span>
+        <ul>
+          <li>Tracking, accounts and campaigns live</li>
+          <li>Ramp to ₹7,600 a day on rules</li>
+          <li>Find 2 angles that clear ₹550 CPA</li>
+          <li>Landing page fixes 1–3 shipped</li>
+        </ul>
+        <p class="small"><b>Exit test:</b> 14+ orders a day by Day 21, 30-day CAC ≤ ₹600, ≥ 380 orders, zero tracking gaps.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Days 31–60 · Sharpen</span>
+        <ul>
+          <li>Iterate winners (hooks, formats, creators)</li>
+          <li>Retargeting refresh every 2 weeks</li>
+          <li>Test pack default and bundle framing</li>
+          <li>Rules tighten to ₹450 target</li>
+        </ul>
+        <p class="small"><b>Exit test:</b> CAC ≤ ₹500 for 14 days, MER ≥ 1.9, AOV trending up.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Days 61–90 · Scale</span>
+        <ul>
+          <li>Step to ₹10,000+ a day on MER gates</li>
+          <li>New angles and creators for fatigue defence</li>
+          <li>Partnership or creator-whitelisted ads</li>
+          <li>Decide on retention and email handoff</li>
+        </ul>
+        <p class="small"><b>Exit test:</b> ₹450 CAC at higher spend, MER ≥ 2.0, repeat-rate data supports further push.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 ROLES -->
+<section class="block" id="roles">
+  <div class="wrap">
+    <div class="num">14 · Roles and responsibilities</div>
+    <h2>Who owns what</h2>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Area</th><th>Me (media buyer)</th><th>Focus Elixir team</th></tr></thead>
+      <tbody>
+        <tr><td><b>Meta account, campaigns, budgets</b></td><td>Own, execute, report</td><td>Approve budget, hold account ownership</td></tr>
+        <tr><td><b>Tracking and measurement</b></td><td>Set up, QA, monitor</td><td>Dev support for site-side changes</td></tr>
+        <tr><td><b>Creative</b></td><td>Briefs, performance feedback, launch and retire</td><td>Produce 8–12 UGC assets a month</td></tr>
+        <tr><td><b>Landing page and CRO</b></td><td>Recommend, specify, implement with your dev</td><td>Approve changes, supply assets</td></tr>
+        <tr><td><b>Brand, offer, pricing</b></td><td>Advise using the data</td><td>Decide</td></tr>
+        <tr><td><b>Claims and compliance</b></td><td>Flag risks before upload</td><td>Final sign-off</td></tr>
+        <tr><td><b>Retention flows</b></td><td>Share audience and repeat insights</td><td>Own</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b class="t">The first 90 days in one sentence</b>
+      Fix the leaks, launch clean, feed it creative every week, run it on rules, scale only when MER says yes, and report honestly every Friday.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Focus Elixir · Meta Ads Plan of Action · Figures are planning estimates built from the brief (₹2.3L budget, ~₹900 AOV, ~₹408 contribution) and the public site. Funnel benchmarks are illustrative until replaced with account actuals in Week 2.</div>
+</footer>
+
+</body>
+</html>
